@@ -1,4 +1,4 @@
-package com.ualr.helloworld;
+package com.ualr.firstapp;
 
 import android.os.Bundle;
 import android.view.View;
@@ -28,6 +28,16 @@ public class MainActivity extends AppCompatActivity {
     // TODO. How do we handle button click events in a easy way?
     // TODO 15. Create a new public method with actions we want to execute when the button is tapped
     public void showTextMessage(View view) {
-        userMsgTV.setText(userInputET.getText().toString());
+
+        String checkVar = userInputET.getText().toString();
+
+        if (checkVar != "") {
+            userMsgTV.setText(userInputET.getText().toString());
+        }
+    }
+
+    public void cleanTextField(View view) {
+        userMsgTV.setText("");
     }
 }
+
